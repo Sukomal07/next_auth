@@ -54,6 +54,6 @@ export const sendEmail = async ({ email, subject, emailType, userId }: any) => {
     const res = await transporter.sendMail(mailOption);
     return res;
   } catch (error: any) {
-    throw new Error(error.message);
+    throw new Error("Sending mail failed. Please try after some time");
   }
 };
